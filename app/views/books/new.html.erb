@@ -1,0 +1,27 @@
+<h2>新規書籍登録</h2>
+<%= form_for @book do |f| %>
+  <tr>
+    <td>
+      書籍名：
+    </td>
+    <td>
+      <%= f.text_field :name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    価格： </td>
+    <td>
+      <%= f.number_field :price %><br>
+  </td>
+  </tr>
+  <tr>
+    <td>
+    出版社： </td><td><%= f.text_field :publish %></td>
+  </tr>
+  <tr>
+  <td>刊行日： </td><td><%= f.date_field :publish_date %></td>
+  </tr>
+  <%= f.submit "登録" %>
+<% end %>
+<%= link_to 'トップへ戻る', books_path %>
